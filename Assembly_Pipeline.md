@@ -4,7 +4,7 @@ Hey! This is the pipeline I used to assemble the genome of _Plestiodon fasciatus
 Unlike my other genome assembly repository, this long read sequencing went very well. I extracted from blood stored in EDTA using a long read MagAttract kit. 
 
 
-## **Genome Assembly with hifiasm -- Adapted from [Amanda Markee](https://github.com/amandamarkee/actias-luna-genome.git)**
+## **Genome Assembly with hifiasm**
 
 [hifiasm](https://hifiasm.readthedocs.io/en/latest/) is a fast and easy haplotype-resolved de novo assembly software for PacBio HiFi reads
  - hifiasm documentation explaining input parameters: https://hifiasm.readthedocs.io/en/latest/pa-assembly.html
@@ -28,10 +28,10 @@ conda activate fasciatus_ass
 hifiasm -o hoff_hifi_assembly.asm -l 2 -t 32 /home/jhoffman1/mendel-nas1/fasciatus_genome/6354_import-dataset/hifi_reads/m84082_240409_161410_s4.hifi_reads.bc2049.fastq
 ```
 
-## **Genome Assembly Quality Assessment with assemblystats.py -- Again, Adapted From [Amanda Markee](https://github.com/amandamarkee/actias-luna-genome.git)**
+## **Genome Assembly Quality Assessment with assemblystats.py**
 
 - After assembly with hifiasm, we can assess assembly quality using the [assemblystats.py script](https://github.com/MikeTrizna/assembly_stats/tree/0.1.4) created by Mike Trizna.
-- The version of assemblystats.py used here was modified by Paul Frandsen (Brigham Young University).
+- The version of assemblystats.py used here was modified by Paul Frandsen (Brigham Young University), courtesy of Amanda Markee.
 
 First, I copied this script into my working directory, and called it assemblystats.py
 
